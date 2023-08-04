@@ -34,7 +34,7 @@ def location_to_inventory():
 location_to_inventory()
 
 
-# this function reads the updated json data from the 'data.csv' file and extracts specific data that matches with specific column names of the Cims csv template ('CIMS_Data.csv'). It then reads the Cims template and merges the extracted data with the CIMS template.
+# this function reads the updated json data from the 'data.csv' file and extracts specific data that matches with specific column names of the csv template ('Data.csv'). It then reads the Cims template and merges the extracted data with the CIMS template.
 def json_to_csv():
     # Read the JSON data from the CSV file
     extracted_data = []
@@ -62,7 +62,7 @@ def json_to_csv():
 
     # Read the existing CIMS csv template file
     existing_data = []
-    with open('/Users/saganj/workplace/JSONtoCSV/src/Converter/CIMS_Data.csv', 'r') as file:
+    with open('/Users/saganj/workplace/JSONtoCSV/src/Converter/Data.csv', 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             existing_data.append(row)
